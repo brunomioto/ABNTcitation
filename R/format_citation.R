@@ -10,10 +10,9 @@
 #' @examples
 #' x <- data.frame(
 #' names = c("Daenerys Targaryen, George R. R. Martin, Luís Inácio Lula da Silva",
-#'           "Hadley Alexander Wickham, Joseph J. Allaire",
-#'           "Stack Overflow"))
+#'           "Hadley Alexander Wickham, Joseph J. Allaire"))
 #' x %>%
-#'   dplyr::mutate(new_names = format_names(names))
+#'   dplyr::mutate(new_names = format_citation(names))
 
 format_citation <- function(variable, separator = ",", space = TRUE) {
 

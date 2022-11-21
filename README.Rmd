@@ -1,0 +1,42 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# ABNTcitation
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+## Installation
+
+You can install the development version of ABNTcitation from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("brunomioto/ABNTcitation")
+```
+
+## Format citations
+
+```{r, message=FALSE, warning=FALSE}
+library(ABNTcitation)
+library(dplyr)
+
+x <- dplyr::tibble(
+names = c("Daenerys Targaryen, George R. R. Martin, Luís Inácio Lula da Silva",
+          "Hadley Alexander Wickham, Joseph J. Allaire"))
+x %>%
+  dplyr::mutate(new_names = format_citation(names))
+```
+
